@@ -1,6 +1,6 @@
 # Pizza Menu
 
-Basic Next.js app for the Hy-Vee pairing interview.
+Basic Next.js + TypeScript app for the Hy-Vee pairing interview.
 
 ## Run it
 
@@ -19,6 +19,9 @@ curl http://localhost:3000/api/pizzas
 
 ## Project layout
 
-- `data/pizzas.js` — pizza data (server-side)
-- `app/api/pizzas/route.js` — `GET /api/pizzas` endpoint
-- `app/page.js` — fetches pizzas and shows the menu
+- `types/pizza.ts` — Pizza type
+- `data/pizzas.ts` — pizza data (server-side)
+- `app/api/pizzas/route.ts` — `GET /api/pizzas` endpoint
+- `lib/api/pizzas.ts` — fetch helper used by TanStack Query
+- `app/page.tsx` — fetches pizzas with `useQuery` and shows the menu
+- `app/providers.tsx` — TanStack Query provider

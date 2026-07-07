@@ -1,7 +1,6 @@
-// Our pizza list lives here on the server side.
-// The API reads from this file and sends it to the browser.
+import type { Pizza } from "@/types/pizza";
 
-export const pizzas = [
+export const pizzas: Pizza[] = [
   {
     id: 1,
     name: "Cheese",
