@@ -19,7 +19,7 @@ curl http://localhost:3000/api/pizzas
 
 ## Project layout
 
-- `types/pizza.ts` — Pizza type
+- `types/pizza.ts` — Zod schema + Pizza type
 - `data/pizzas.ts` — pizza data (server-side)
 - `app/api/pizzas/route.ts` — `GET /api/pizzas` endpoint
 - `lib/api/pizzas.ts` — fetch helper used by TanStack Query

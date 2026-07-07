@@ -1,6 +1,6 @@
-import type { Pizza } from "@/types/pizza";
+import { pizzasSchema, type Pizza } from "@/types/pizza";
 
-export const pizzas: Pizza[] = [
+export const pizzas: Pizza[] = pizzasSchema.parse([
   {
     id: 1,
     name: "Cheese",
@@ -25,4 +25,4 @@ export const pizzas: Pizza[] = [
     description: "Pepperoni, sausage, bacon, ham",
     price: 16,
   },
-];
+]);

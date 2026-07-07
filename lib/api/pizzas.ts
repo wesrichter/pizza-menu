@@ -1,4 +1,4 @@
-import type { Pizza } from "@/types/pizza";
+import { pizzasSchema, type Pizza } from "@/types/pizza";
 
 export async function fetchPizzas(): Promise<Pizza[]> {
   const response = await fetch("/api/pizzas");
@@ -7,5 +7,6 @@ export async function fetchPizzas(): Promise<Pizza[]> {
     throw new Error("Could not load pizzas");
   }
 
-  return response.json();
+  const data: unknown = await response.json();
+  return pizzasSchema.parse(data);
 }
